@@ -76,6 +76,40 @@ const displayCocktail = data =>{
         cocktailContainer.appendChild(cocktailContainerDiv)
     });
 }
+document.getElementById('input-fild').addEventListener('keypress',function(e){
+  if(e.key === 'Enter'){
+    const inputField = document.getElementById('input-fild');
+    const inputFieldValue =inputField.value;
+ 
+    if(inputField.value === ''){
+        let timerInterval
+        Swal.fire({
+          title: 'Please Input What You Want',
+          html: 'I will close in <b></b> milliseconds.',
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+              b.textContent = Swal.getTimerLeft()
+            }, 100)
+          },
+          willClose: () => {
+            clearInterval(timerInterval)
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer')
+          }
+        })
+       return
+   }
+    cocktail(inputFieldValue) ;
+    inputField.value=''
+  }
+})
 
 const buyNow =() =>{
   Swal.fire({
