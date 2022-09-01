@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheCocktailDB</title>
+    <link rel="shortcut icon" href="img/cocktail.png" type="image/x-icon">
+     <!-- tailwind  -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- daisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header class="">
+        <div class="form-control mt-5 md:w-1/4 md:mx-auto">
+            <div class="mb-2 flex justify-between">
+                <h2 class=" font-bold">Search <span class="text-red-400"> Cocktail</span> Here </h2>
+                <span>Press <kbd class="kbd kbd-sm"> Search</kbd>.</span>
+                
+            </div >
+            <div class="input-group" >
+              <input id="input-fild" class="w-11/12 border-2 border-black p-2" type="text" placeholder="Search…" class="input input-bordered" />
+              <button id="submit-btn" class="btn btn-square">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              </button>
+            </div>
+            <label for="my-modal" class="btn mt-5 modal-button bg-orange-400 text-black">Open search List</label>
+          </div>
+          <!-- search list  -->
+          <!-- The button to open modal -->
+
+<!-- Put this part before -->
+<input type="checkbox" id="my-modal" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box">
+      <div class=" flex justify-between items-center">
+        <h3 class="font-bold text-lg">Search List</h3>
+        <label for="my-modal" class="btn">Close</label>
+      </div>
+    <ul class="list-decimal font-black ml-2 ">
+        <li>Mojito</li>
+        <li>Old Fashioned</li>
+        <li>Long Island Tea</li>
+        <li>Negroni</li>
+        <li>Whiskey Sour</li>
+        <li>Dry Martini</li>
+        <li>Daiquiri</li>
+        <li>Margarita</li>
+        <li>Cocktail Horse’s Neck</li>
+        <li>Planter’s Punch</li>
+        <li>Ramos Gin Fizz</li>
+    </ul>
+    <!-- <div class="modal-action">
+      <label for="my-modal" class="btn">Yay!</label>
+    </div> -->
+  </div>
+</div>
+          <div>
+
+          </div>
+    </header>
+    <main>
+        <section class="text-center my-5 text-4xl font-bold">
+            <h1>Welcome to<span class="text-red-400"> TheCocktailDB</span></h1>
+        </section>
+
+
+        <!-- Cocktail card  -->
+        <section class="mt-10">
+            <div id="cocktail-container" class="grid md:grid-cols-3 gap-4 mx-20">
+                
+            </div>
+            
+    
+        </section>
+    </main>
+    <!-- sweetElert  -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/prectice-10.js"></script>
+</body>
+</html>
